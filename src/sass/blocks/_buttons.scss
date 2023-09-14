@@ -1,0 +1,26 @@
+.btn {
+  width: 196px;
+  padding: 11px 0;
+  border-radius: 50px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  transition: 0.1s ease;
+  &_main {
+    border: none;
+    background-color: $accent;
+    color: #ffffff;
+    &:hover {
+      background-color: #00d29f;
+    }
+  }
+  &_secondary {
+    background-color: transparent;
+    border: 1px solid $accent;
+    color: $accent;
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
