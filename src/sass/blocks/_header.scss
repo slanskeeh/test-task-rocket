@@ -9,4 +9,9 @@ header {
   left: 0;
   background-color: #fff;
   z-index: 100;
+  padding: 0 18px;
+
+  @media (min-width: 767px) {
+    padding: 0;
+  }
 }
