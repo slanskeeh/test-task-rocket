@@ -3,11 +3,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 12px 0;
 
   .hamburger {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    transition: 0.2s ease;
 
     div {
       display: block;
@@ -15,10 +17,25 @@ nav {
       height: 4px;
 
       background-color: $accent;
+      transition: 0.2s ease;
     }
-  }
 
-  .logo {
+    &_active {
+      gap: 0;
+      div {
+        &:nth-child(1) {
+          margin-bottom: -2px;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          margin-top: -2px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
 
   .wrapper {
