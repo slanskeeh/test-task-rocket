@@ -31,5 +31,9 @@
     color: #1fa181;
     background-color: #fff;
     font-weight: 700;
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+    }
   }
 }

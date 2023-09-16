@@ -85,6 +85,10 @@
       font-size: 16px;
       font-weight: 700;
       line-height: normal;
+
+      &:hover {
+        color: $text;
+      }
     }
     &__location {
       font-size: 13px;
