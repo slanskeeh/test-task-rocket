@@ -178,7 +178,7 @@
       </section>
       <section class="slider">
         <div class="container">
-          <div class="slider__card">
+          <div class="slider__card slider__card_current" id="slider__card_1">
             <div class="slider__card__image">
               <img src="./img/slider_card.png" alt="photo" />
             </div>
@@ -200,6 +200,62 @@
               <div class="slider__card__info__price">
                 <p class="slider__card__info__price_active">Всего 2800₽</p>
                 <p class="slider__card__info__price_old">3500₽</p>
+              </div>
+              <div class="slider__card__info__buttons">
+                <button class="btn btn_main">Записаться</button>
+                <button class="btn btn_secondary">Подробнее</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider__card" id="slider__card_2">
+            <div class="slider__card__image">
+              <img src="./img/slider_card.png" alt="photo" />
+            </div>
+            <div class="slider__card__info">
+              <h3 class="slider__card__info__title">Check-UP 2</h3>
+              <p class="slider__card__info__subtitle">для женщин</p>
+              <ul class="slider__card__info__list">
+                <li class="slider__card__info__list__item">
+                  Гормональный скрининг
+                </li>
+                <li class="slider__card__info__list__item">Эстроген</li>
+                <li class="slider__card__info__list__item">
+                  Свободный эстроген
+                </li>
+                <li class="slider__card__info__list__item">
+                  Глобулин, связывающий половые гормоны
+                </li>
+              </ul>
+              <div class="slider__card__info__price">
+                <p class="slider__card__info__price_active">Всего 2800₽</p>
+                <p class="slider__card__info__price_old">3500₽</p>
+              </div>
+              <div class="slider__card__info__buttons">
+                <button class="btn btn_main">Записаться</button>
+                <button class="btn btn_secondary">Подробнее</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider__card" id="slider__card_3">
+            <div class="slider__card__image">
+              <img src="./img/slider_card.png" alt="photo" />
+            </div>
+            <div class="slider__card__info">
+              <h3 class="slider__card__info__title">Check-UP 3</h3>
+              <p class="slider__card__info__subtitle">для детей</p>
+              <ul class="slider__card__info__list">
+                <li class="slider__card__info__list__item">
+                  Гормональный скрининг
+                </li>
+                <li class="slider__card__info__list__item">Гемоглобин</li>
+                <li class="slider__card__info__list__item">Гематоген</li>
+                <li class="slider__card__info__list__item">
+                  Глобулин, глобус и яндекс карты
+                </li>
+              </ul>
+              <div class="slider__card__info__price">
+                <p class="slider__card__info__price_active">Всего 1200₽</p>
+                <p class="slider__card__info__price_old">10000₽</p>
               </div>
               <div class="slider__card__info__buttons">
                 <button class="btn btn_main">Записаться</button>
@@ -229,7 +285,11 @@
                 </defs>
               </svg>
             </div>
-            <div class="slider__controls__info">1<span>/4</span></div>
+            <div class="slider__controls__info">
+              <span id="slider__current-slide"></span>/<span
+                id="slider__slides-count"
+              ></span>
+            </div>
             <div class="slider__controls__arrow slider__controls__arrow_right">
               <svg
                 width="34"
@@ -298,5 +358,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

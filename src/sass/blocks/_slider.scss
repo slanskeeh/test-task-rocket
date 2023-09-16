@@ -9,11 +9,17 @@
   }
 
   &__card {
+    display: none;
+    visibility: hidden;
     border-radius: 5px;
     overflow: hidden;
-    display: flex;
     flex-direction: column;
     width: 100%;
+
+    &_current {
+      display: flex;
+      visibility: visible;
+    }
 
     &__image {
       img {
@@ -100,11 +106,12 @@
     align-items: center;
     gap: 36px;
     &__info {
+      color: #c0c0c0;
       font-size: 18px;
       font-weight: 400;
       line-height: normal;
-      span {
-        color: #c0c0c0;
+      span#slider__current-slide {
+        color: $text;
       }
     }
     &__arrow {
