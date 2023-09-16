@@ -163,7 +163,7 @@
       <div class="popup__overlay"></div>
       <div class="popup__modal">
         <p class="popup__modal__title">Ваше обращение к нам на почту</p>
-        <form action="./php/mail.php" method="post" class="popup__modal__form">
+        <form action="mail.php" method="post" class="popup__modal__form">
           <input
             required
             type="text"
@@ -186,9 +186,11 @@
             rows="5"
             placeholder="Ваше сообщение"
           ></textarea>
-          <button type="submit" class="btn popup__modal__form__submit">
-            Отправить сообщение
-          </button>
+          <input
+            type="submit"
+            class="btn popup__modal__form__submit"
+            value="Отправить сообщение"
+          />
         </form>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
     $fio = $_POST['name'];
     $email = $_POST['email'];
-    $letter = $_POST['letter']
+    $letter = $_POST['letter'];
     $fio = htmlspecialchars($fio);
     $email = htmlspecialchars($email);
     $letter = htmlspecialchars($letter);
