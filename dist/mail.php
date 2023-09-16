@@ -1,19 +1,10 @@
 <?php
-    $fio = $_POST['name'];
-    $email = $_POST['email'];
-    $letter = $_POST['letter'];
-    $fio = htmlspecialchars($fio);
-    $email = htmlspecialchars($email);
-    $letter = htmlspecialchars($letter);
-    $fio = urldecode($fio);
-    $email = urldecode($email);
-    $letter = urldecode($letter);
-    $fio = trim($fio);
-    $email = trim($email);
-    $letter = trim($letter);
-    if (mail("rbru-metrika@yandex.ru", "Форма заявки с тестового задания", "ФИО:".$fio.". E-mail: ".$email.". Текст письма: ".$letter, "From: example2@mail.ru \r\n"))
-    {     echo "сообщение успешно отправлено";
-    } else {
-        echo "при отправке сообщения возникли ошибки";
-    }
+    $to = "rbru-metrika@yandex.ru"; // емайл получателя данных из формы
+    $tema = "Форма заявки тестового задания"; // тема полученного емайла
+    $message = "ФИО: ".$_POST['name']."<br>";//присвоить переменной значение, полученное из формы name=name
+    $message .= "E-mail: ".$_POST['email']."<br>"; //полученное из формы name=email
+    $message .= "Сообщение: ".$_POST['letter']."<br>"; //полученное из формы name=message
+    $headers = 'MIME-Version: 1.0' . "\r\n"; // заголовок соответствует формату плюс символ перевода строки
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n"; // указывает на тип посылаемого контента
+    mail($to, $tema, $message, $headers); //отправляет получателю на емайл значения переменных
 ?>
